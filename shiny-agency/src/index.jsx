@@ -5,6 +5,8 @@ import Home from './pages/Home/Home'
 import Survey from './pages/Survey'
 import Header from './conponents/Header'
 import Error from './conponents/Error/index'
+import Result from './pages/Result/index'
+import Freelances from './pages/Freelances/index'
 
 
 ReactDOM.render(
@@ -18,7 +20,13 @@ ReactDOM.render(
         <Route path="/survey/:questionNumber">
           <Survey />
         </Route>
-        <Route>
+        <Route path="/result">
+          <Result />
+        </Route>
+        <Route path="/freelances">
+          <Freelances />
+        </Route>
+        <Route >
           <Error />
         </Route>
       </Switch>
