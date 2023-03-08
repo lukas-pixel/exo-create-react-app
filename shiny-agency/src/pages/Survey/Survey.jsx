@@ -13,7 +13,7 @@ function Survey() {
             <h2>Question {questionNumber}</h2>
             <Link to={`/survey/${prevQuestionNumber}`}>Précédent</Link>
             {questionNumberInt === 10 ? (
-                <Link to="/result">Résultats</Link>
+                <Link to="/results">Résultats</Link>
             ) : (
                 <Link to={`/survey/${nextQuestionNumber}`}>Suivant</Link>
             )}

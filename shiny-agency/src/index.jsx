@@ -5,13 +5,16 @@ import Home from './pages/Home/Home'
 import Survey from './pages/Survey/Survey'
 import Header from './conponents/Header'
 import Error from './conponents/Error/index'
-import Result from './pages/Result/index'
+import Results from './pages/Result/index'
 import Freelances from './pages/Freelances/index'
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-  div {
+  * {
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  }
+  body {
+    margin: 0;
   }
 `
 
@@ -28,7 +31,7 @@ ReactDOM.render(
           <Survey />
         </Route>
         <Route path="/result">
-          <Result />
+          <Results />
         </Route>
         <Route path="/freelances">
           <Freelances />

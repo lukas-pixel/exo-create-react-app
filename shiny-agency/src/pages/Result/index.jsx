@@ -1,9 +1,9 @@
-function Result() {
+function Results() {
     return (
         <div>
-            <h1>Result</h1>
+            <h1>Résultats</h1>
         </div>
     )
 }
 
-export default Result
+export default Results
