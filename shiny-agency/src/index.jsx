@@ -7,11 +7,18 @@ import Header from './conponents/Header'
 import Error from './conponents/Error/index'
 import Result from './pages/Result/index'
 import Freelances from './pages/Freelances/index'
+import { createGlobalStyle } from 'styled-components'
 
+const GlobalStyle = createGlobalStyle`
+  div {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  }
+`
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
+      <GlobalStyle>
       <Header />
       <Switch>
         <Route exact path="/">
@@ -30,6 +37,7 @@ ReactDOM.render(
           <Error />
         </Route>
       </Switch>
+      </GlobalStyle>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
