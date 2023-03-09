@@ -5,8 +5,10 @@ import colors from '../../utils/style/colors'
 const CardsContainer = styled.div`
     display: grid;
     gap: 24px;
-    grid-template-rows: 350px 350px
-    grid-template-columns: reapeat(2, 1fr)
+    grid-template-rows: 350px 350px;
+    grid-template-columns: reapeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
 `
 
 const PageTitle = styled.h1`

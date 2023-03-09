@@ -6,7 +6,8 @@ import colors from '../../utils/style/colors'
 const CardLabel = styled.span`
     color: #5843e4;
     font-size: 22px;
-    font-weight: bold;
+    font-weight: normal;
+    padding-left: 15px;
 `
 
 const CardTitle = styled.span`
@@ -19,16 +20,19 @@ const CardTitle = styled.span`
 const CardImage = styled.img`
     height: 80px;
     width: 80px;
+    align-self: center;
     border-radius: 50%;
 `
 
 const CardWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     padding: 15px;
     background-color: ${colors.backgroundLight};
     border-radius: 30px;
     width: 350px;
+    height: 300px;
     transition: 200ms;
     &:hover { 
         cursor: pointer;
