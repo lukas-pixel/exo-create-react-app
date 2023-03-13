@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { ThemeContext } from '../../utils/context'
 
 const FooterContainer = styled.footer`

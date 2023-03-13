@@ -13,6 +13,8 @@ import { ThemeProvider, SurveyProvider } from './utils/context'
 
 ReactDOM.render(
   <React.StrictMode>
+    <ThemeProvider>
+      <SurveyProvider>
     <Router>
       <GlobalStyle />
       <Header />
@@ -34,9 +36,9 @@ ReactDOM.render(
         </Route>
       </Switch>
       <Footer />
-      <SurveyProvider />
-      <ThemeProvider />
-    </Router>
+      </Router>
+      </SurveyProvider>
+      </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
