@@ -13,32 +13,32 @@ import { ThemeProvider, SurveyProvider } from './utils/context'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <SurveyProvider>
     <Router>
-      <GlobalStyle />
-      <Header />
-      <Switch>
-        <Route exact path="/">
-         <Home />
-        </Route>
-        <Route path="/survey/:questionNumber">
-          <Survey />
-        </Route>
-        <Route path="/result">
-          <Results />
-        </Route>
-        <Route path="/freelances">
-          <Freelances />
-        </Route>
-        <Route >
-          <Error />
-        </Route>
-      </Switch>
-      <Footer />
-      </Router>
-      </SurveyProvider>
+      <ThemeProvider>
+        <SurveyProvider>
+          <GlobalStyle />
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/survey/:questionNumber">
+              <Survey />
+            </Route>
+            <Route path="/results">
+              <Results />
+            </Route>
+            <Route path="/freelances">
+              <Freelances />
+            </Route>
+            <Route path="*">
+              <Error />
+            </Route>
+          </Switch>
+          <Footer />
+        </SurveyProvider>
       </ThemeProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 )
