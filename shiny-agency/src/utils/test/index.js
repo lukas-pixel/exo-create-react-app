@@ -1,17 +1,16 @@
 import { render as rtlRender } from '@testing-library/react'
-import { ThemeProvider, SurveyProvider } from '../context'
+import { ThemeProvider, SurveyProvider } from '../../utils/context'
 import { MemoryRouter } from 'react-router-dom'
 
-function Wrapper({ children }) {
+export function render(ui, options) {
+  function Wrapper({ children }) {
     return (
-        <MemoryRouter>
-            <ThemeProvider>
-                <SurveyProvider>{children}</SurveyProvider>
-            </ThemeProvider>
-        </MemoryRouter>
+      <MemoryRouter {...options}>
+        <ThemeProvider>
+          <SurveyProvider>{children}</SurveyProvider>
+        </ThemeProvider>
+      </MemoryRouter>
     )
-}
-
-export function render(ui) {
-    rtlRender(ui, { wrapper: Wrapper })
+  }
+  rtlRender(ui, { wrapper: Wrapper })
 }
