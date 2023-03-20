@@ -1,8 +1,9 @@
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
-import { render, waitFor, screen } from '@testing-library/react'
+import { render, waitFor, screen, waitForElementToBeRemoved } from '@testing-library/react'
 
 import Freelances from './'
+import { ThemeProvider } from '../../utils/context'
 
 const freelancersMockedData = [
     {
@@ -31,3 +32,18 @@ beforeAll(() => server.listen())
 afterEach(() => server.resetHandlers())
 // Ferme la simulation d'API une fois que les tests sont finis
 afterAll(() => server.close())
+
+it('Should display freelancers names', async () => {
+    render(
+        <ThemeProvider>
+            <Freelances />
+        </ThemeProvider>
+    )
+
+    screen.getByTestId('loader')
+
+    await waitFor(() => {
+        screen.getByText('Harry Potter')
+        screen.getByText('Hermione Granger')
+    })
+})
