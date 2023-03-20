@@ -4,11 +4,24 @@ import { render, waitFor, screen } from '@testing-library/react'
 
 import Freelances from './'
 
+const freelancersMockedData = [
+    {
+        name: 'Harry Potter',
+        job: 'Magicien frontend',
+        picture: '',
+    },
+    {
+        name: 'Hermione Granger',
+        job: 'Magicien fullstack',
+        picture: '',
+    }
+]
+
 const server = setupServer(
     //On précise ici l'url qu'il faudra 'intercepter"
     rest.get('http://localhost:8000/freelances', (req, res, ctx) => {
         //là on va pouvoir passer les datas mockées dans ce qui est retourné en json
-        return res(ctx.json({}))
+        return res(ctx.json({ freelancersList: freelancersMockedData }))
     })
 )
 
