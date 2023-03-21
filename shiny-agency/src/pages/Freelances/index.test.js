@@ -1,3 +1,4 @@
+/* eslint-disable testing-library/prefer-query-by-disappearance */
 import { rest } from 'msw'
 import '@testing-library/jest-dom/extend-expect'
 import { setupServer } from 'msw/node'
