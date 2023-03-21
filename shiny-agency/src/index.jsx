@@ -9,7 +9,6 @@ import Header from './conponents/Header/index'
 import Footer from './conponents/Footer'
 import Error from './conponents/Error'
 import GlobalStyle from './utils/style/GlobalStyle'
-import Profile from './pages/Profile/index'
 import { ThemeProvider, SurveyProvider } from './utils/context'
 
 ReactDOM.render(
@@ -31,9 +30,6 @@ ReactDOM.render(
             </Route>
             <Route path="/freelances">
               <Freelances />
-            </Route>
-            <Route path="/profile/:id" render={(props) => <Profile {...props} />}>
-              <Profile />
             </Route>
             <Route path="*">
               <Error />
